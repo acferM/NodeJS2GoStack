@@ -19,7 +19,7 @@ class CreateTransactionService {
       const balance = this.transactionsRepository.getBalance();
 
       if (balance.total < value) {
-        throw Error('You dont have the money to make that transaction');
+        throw Error('You dont have enough balance');
       }
     }
 
